@@ -34,10 +34,7 @@ class ViewController: UIViewController {
 
     private func setConstrains() {
         tableView.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.bottom.equalToSuperview()
-            $0.left.equalToSuperview()
-            $0.right.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
     }
 }
