@@ -14,6 +14,7 @@
 		AB317EF52AD6CA8A00EDC241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB317EF32AD6CA8A00EDC241 /* LaunchScreen.storyboard */; };
 		AB317EFE2AD75B5300EDC241 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB317EFD2AD75B5300EDC241 /* SnapKit */; };
 		AB317F002AD75B5300EDC241 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB317EFF2AD75B5300EDC241 /* SnapKit-Dynamic */; };
+		AB317F022AD7641F00EDC241 /* CheckListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB317F012AD7641F00EDC241 /* CheckListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AB317EF12AD6CA8A00EDC241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB317EF42AD6CA8A00EDC241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB317EF62AD6CA8A00EDC241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB317F012AD7641F00EDC241 /* CheckListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				AB317EE82AD6CA8900EDC241 /* AppDelegate.swift */,
 				AB317EEA2AD6CA8900EDC241 /* SceneDelegate.swift */,
 				AB317EEC2AD6CA8900EDC241 /* ViewController.swift */,
+				AB317F012AD7641F00EDC241 /* CheckListTableViewCell.swift */,
 				AB317EF12AD6CA8A00EDC241 /* Assets.xcassets */,
 				AB317EF32AD6CA8A00EDC241 /* LaunchScreen.storyboard */,
 				AB317EF62AD6CA8A00EDC241 /* Info.plist */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB317F022AD7641F00EDC241 /* CheckListTableViewCell.swift in Sources */,
 				AB317EED2AD6CA8900EDC241 /* ViewController.swift in Sources */,
 				AB317EE92AD6CA8900EDC241 /* AppDelegate.swift in Sources */,
 				AB317EEB2AD6CA8900EDC241 /* SceneDelegate.swift in Sources */,

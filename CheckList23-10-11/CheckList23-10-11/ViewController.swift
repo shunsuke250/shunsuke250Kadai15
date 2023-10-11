@@ -15,11 +15,16 @@ class ViewController: UIViewController {
         table.backgroundColor = .lightGray
         return table
     }()
+    
+    let cellIdentifier = "CustomCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupComponents()
         setConstrains()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(CheckListTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
 
     private func setupComponents() {
@@ -37,3 +42,30 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        10
+    }
+
+    func tableView(
+        _ tableView: UITableView,
+        heightForRowAt indexPath: IndexPath
+    ) -> CGFloat {
+        42
+    }
+
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: cellIdentifier,
+            for: indexPath) as! CheckListTableViewCell
+        cell.customLabel.text = "test\(indexPath.row)"
+
+        return cell
+    }
+}
