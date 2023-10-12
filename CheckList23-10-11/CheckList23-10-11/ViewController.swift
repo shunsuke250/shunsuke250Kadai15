@@ -13,13 +13,14 @@ class ViewController: UIViewController {
     private let fruits: [String] = [
         "りんご", "みかん", "バナナ", "パイナップル"
     ]
+
+    private let cellIdentifier = "CustomCell"
+
     private let tableView: UITableView = {
         let table = UITableView()
         table.backgroundColor = .lightGray
         return table
     }()
-    
-    let cellIdentifier = "CustomCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
