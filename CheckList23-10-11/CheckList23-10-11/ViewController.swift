@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupComponents()
-        setConstrains()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CheckListTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
@@ -34,9 +33,7 @@ class ViewController: UIViewController {
     private func setupComponents() {
         view.backgroundColor = .white
         view.addSubview(tableView)
-    }
 
-    private func setConstrains() {
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
