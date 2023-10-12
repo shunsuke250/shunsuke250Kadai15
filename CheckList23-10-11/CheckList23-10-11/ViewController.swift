@@ -18,7 +18,6 @@ class ViewController: UIViewController {
 
     private let tableView: UITableView = {
         let table = UITableView()
-        table.backgroundColor = .lightGray
         return table
     }()
 
@@ -31,7 +30,6 @@ class ViewController: UIViewController {
     }
 
     private func setupComponents() {
-        view.backgroundColor = .white
         view.addSubview(tableView)
 
         tableView.snp.makeConstraints {
