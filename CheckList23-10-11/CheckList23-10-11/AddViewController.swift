@@ -63,5 +63,6 @@ class AddViewController: UIViewController {
     }
 
     @objc func cancel() {
+        dismiss(animated: true, completion: nil)
     }
 }
