@@ -52,6 +52,10 @@ class ViewController: UIViewController {
     
     // プラスボタンがタップされたとき
     @objc func addFruit() {
+        let addViewController = AddViewController()
+        let navigationController = UINavigationController(rootViewController: addViewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
     }
 }
 
