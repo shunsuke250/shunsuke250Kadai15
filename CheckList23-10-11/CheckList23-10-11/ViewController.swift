@@ -24,12 +24,22 @@ class ViewController: UIViewController {
         return table
     }()
 
+    private var addBarButtonItem: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupComponents()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CheckListTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        
+        addBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "plus"),
+            style: .plain,
+            target: self,
+            action: #selector(addFruit)
+        )
+        navigationItem.rightBarButtonItem = addBarButtonItem
     }
 
     private func setupComponents() {
@@ -38,6 +48,14 @@ class ViewController: UIViewController {
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    // プラスボタンがタップされたとき
+    @objc func addFruit() {
+        let addViewController = AddViewController()
+        let navigationController = UINavigationController(rootViewController: addViewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
     }
 }
 
