@@ -8,14 +8,14 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+var fruits: [(String, Bool)] = [
+    ("りんご", false),
+    ("みかん", true),
+    ("バナナ", false),
+    ("パイナップル", true)
+]
 
-    private let fruits: [(String, Bool)] = [
-        ("りんご", false),
-        ("みかん", true),
-        ("バナナ", false),
-        ("パイナップル", true)
-    ]
+class ViewController: UIViewController {
 
     private let cellIdentifier = "CustomCell"
 
