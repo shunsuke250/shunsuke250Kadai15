@@ -66,7 +66,7 @@ class AddViewController: UIViewController {
     }
 
     @objc private func saveFruit() {
-        guard let fruit = addTextField.text else { return }
+        guard let fruit = addTextField.text?.trimmingCharacters(in: .whitespaces), !fruit.isEmpty else { return }
         delegate?.saveFruit(name: fruit)
         dismiss(animated: true, completion: nil)
     }
