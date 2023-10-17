@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AddViewControllerDelegate: AnyObject {
+    func saveFruit(name: String)
+}
+
 class AddViewController: UIViewController {
 
     private let nameLabel: UILabel = {
@@ -23,6 +27,8 @@ class AddViewController: UIViewController {
 
     private var saveBarButtonItem: UIBarButtonItem!
     private var cancelBarButtonItem: UIBarButtonItem!
+
+    weak var delegate: AddViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +65,13 @@ class AddViewController: UIViewController {
         }
     }
 
-    @objc func saveFruit() {
+    @objc private func saveFruit() {
+        guard let fruit = addTextField.text else { return }
+        delegate?.saveFruit(name: fruit)
+        dismiss(animated: true, completion: nil)
     }
 
-    @objc func cancel() {
+    @objc private func cancel() {
         dismiss(animated: true, completion: nil)
     }
 }

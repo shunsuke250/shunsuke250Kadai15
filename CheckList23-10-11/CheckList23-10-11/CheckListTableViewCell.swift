@@ -9,13 +9,13 @@ import UIKit
 
 class CheckListTableViewCell: UITableViewCell {
 
-    let customLabel: UILabel = {
+    private let customLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    let checkImage: UIImageView = {
+    private let checkImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(systemName: "checkmark")
         image.tintColor = .orange
@@ -44,6 +44,11 @@ class CheckListTableViewCell: UITableViewCell {
             $0.size.equalTo(30)
             $0.centerY.equalToSuperview()
         }
+    }
+
+    func configure(_ fruit: Fruit) {
+        customLabel.text = fruit.name
+        checkImage.isHidden = !fruit.shouldShow
     }
 
     required init?(coder: NSCoder) {
