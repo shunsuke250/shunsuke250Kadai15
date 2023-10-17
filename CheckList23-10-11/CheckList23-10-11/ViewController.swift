@@ -42,11 +42,6 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem = addBarButtonItem
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        print(fruits)
-    }
-
     private func setupComponents() {
         view.addSubview(tableView)
 
