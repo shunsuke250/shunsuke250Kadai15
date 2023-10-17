@@ -12,8 +12,6 @@
 		AB317EED2AD6CA8900EDC241 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB317EEC2AD6CA8900EDC241 /* ViewController.swift */; };
 		AB317EF22AD6CA8A00EDC241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB317EF12AD6CA8A00EDC241 /* Assets.xcassets */; };
 		AB317EF52AD6CA8A00EDC241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB317EF32AD6CA8A00EDC241 /* LaunchScreen.storyboard */; };
-		AB317EFE2AD75B5300EDC241 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB317EFD2AD75B5300EDC241 /* SnapKit */; };
-		AB317F002AD75B5300EDC241 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB317EFF2AD75B5300EDC241 /* SnapKit-Dynamic */; };
 		AB317F022AD7641F00EDC241 /* CheckListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB317F012AD7641F00EDC241 /* CheckListTableViewCell.swift */; };
 		AB317F042ADA9C7C00EDC241 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB317F032ADA9C7C00EDC241 /* AddViewController.swift */; };
 		AB7C3B132ADD88410014246E /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7C3B122ADD88410014246E /* Fruit.swift */; };
@@ -37,8 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB317EFE2AD75B5300EDC241 /* SnapKit in Frameworks */,
-				AB317F002AD75B5300EDC241 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +90,6 @@
 			);
 			name = "CheckList23-10-11";
 			packageProductDependencies = (
-				AB317EFD2AD75B5300EDC241 /* SnapKit */,
-				AB317EFF2AD75B5300EDC241 /* SnapKit-Dynamic */,
 			);
 			productName = "CheckList23-10-11";
 			productReference = AB317EE52AD6CA8900EDC241 /* CheckList23-10-11.app */;
@@ -126,7 +120,6 @@
 			);
 			mainGroup = AB317EDC2AD6CA8900EDC241;
 			packageReferences = (
-				AB317EFC2AD75B5300EDC241 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = AB317EE62AD6CA8900EDC241 /* Products */;
 			projectDirPath = "";
@@ -374,30 +367,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		AB317EFC2AD75B5300EDC241 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.6.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AB317EFD2AD75B5300EDC241 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AB317EFC2AD75B5300EDC241 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		AB317EFF2AD75B5300EDC241 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AB317EFC2AD75B5300EDC241 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB317EDD2AD6CA8900EDC241 /* Project object */;
 }
