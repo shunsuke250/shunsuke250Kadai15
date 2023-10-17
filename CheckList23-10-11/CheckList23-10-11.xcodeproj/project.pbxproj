@@ -16,6 +16,7 @@
 		AB317F002AD75B5300EDC241 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB317EFF2AD75B5300EDC241 /* SnapKit-Dynamic */; };
 		AB317F022AD7641F00EDC241 /* CheckListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB317F012AD7641F00EDC241 /* CheckListTableViewCell.swift */; };
 		AB317F042ADA9C7C00EDC241 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB317F032ADA9C7C00EDC241 /* AddViewController.swift */; };
+		AB7C3B132ADD88410014246E /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7C3B122ADD88410014246E /* Fruit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AB317EF62AD6CA8A00EDC241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB317F012AD7641F00EDC241 /* CheckListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListTableViewCell.swift; sourceTree = "<group>"; };
 		AB317F032ADA9C7C00EDC241 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		AB7C3B122ADD88410014246E /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				AB317EE82AD6CA8900EDC241 /* AppDelegate.swift */,
 				AB317EEA2AD6CA8900EDC241 /* SceneDelegate.swift */,
 				AB317EEC2AD6CA8900EDC241 /* ViewController.swift */,
+				AB7C3B122ADD88410014246E /* Fruit.swift */,
 				AB317F032ADA9C7C00EDC241 /* AddViewController.swift */,
 				AB317F012AD7641F00EDC241 /* CheckListTableViewCell.swift */,
 				AB317EF12AD6CA8A00EDC241 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB7C3B132ADD88410014246E /* Fruit.swift in Sources */,
 				AB317F042ADA9C7C00EDC241 /* AddViewController.swift in Sources */,
 				AB317F022AD7641F00EDC241 /* CheckListTableViewCell.swift in Sources */,
 				AB317EED2AD6CA8900EDC241 /* ViewController.swift in Sources */,
