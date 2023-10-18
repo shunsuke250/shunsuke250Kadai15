@@ -5,8 +5,6 @@
 //  Created by 副山俊輔 on 2023/10/17.
 //
 
-import Foundation
-
 struct Fruit {
     let name: String
     let shouldShow: Bool
