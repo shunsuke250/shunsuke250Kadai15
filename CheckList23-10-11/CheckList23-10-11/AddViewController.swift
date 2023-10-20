@@ -54,15 +54,19 @@ class AddViewController: UIViewController {
         view.addSubview(nameLabel)
         view.addSubview(addTextField)
 
-        nameLabel.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(50)
-            $0.top.equalToSuperview().offset(150)
-        }
-        addTextField.snp.makeConstraints {
-            $0.left.equalTo(nameLabel.snp.right).offset(20)
-            $0.centerY.equalTo(nameLabel.snp.centerY)
-            $0.width.equalTo(200)
-        }
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        addTextField.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            nameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 150)
+        ])
+
+        NSLayoutConstraint.activate([
+            addTextField.leftAnchor.constraint(equalTo: nameLabel.rightAnchor, constant: 20),
+            addTextField.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor),
+            addTextField.widthAnchor.constraint(equalToConstant: 200)
+        ])
     }
 
     @objc private func saveFruit() {

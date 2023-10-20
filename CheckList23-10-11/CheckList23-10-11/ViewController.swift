@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 
 class ViewController: UIViewController {
 
@@ -18,12 +17,7 @@ class ViewController: UIViewController {
     ]
 
     private let cellIdentifier = "CustomCell"
-
-    private let tableView: UITableView = {
-        let table = UITableView()
-        return table
-    }()
-
+    private let tableView = UITableView()
     private var addBarButtonItem: UIBarButtonItem!
 
     override func viewDidLoad() {
@@ -44,13 +38,16 @@ class ViewController: UIViewController {
 
     private func setupComponents() {
         view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
 
-        tableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
-    
-    // プラスボタンがタップされたとき
+
     @objc private func addFruit() {
         let addViewController = AddViewController()
         let navigationController = UINavigationController(rootViewController: addViewController)

@@ -24,8 +24,7 @@ class CheckListTableViewCell: UITableViewCell {
         return image
     }()
 
-    override init(style: UITableViewCell.CellStyle,
-                  reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupComponents()
     }
@@ -34,16 +33,17 @@ class CheckListTableViewCell: UITableViewCell {
         contentView.addSubview(customLabel)
         contentView.addSubview(checkImage)
 
-        customLabel.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.left.equalTo(checkImage.snp.right).offset(10)
-            $0.right.equalToSuperview()
-        }
-        checkImage.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(10)
-            $0.size.equalTo(30)
-            $0.centerY.equalToSuperview()
-        }
+        NSLayoutConstraint.activate([
+            customLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            customLabel.leftAnchor.constraint(equalTo: checkImage.rightAnchor, constant: 10),
+            customLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor)
+        ])
+
+        NSLayoutConstraint.activate([
+            checkImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            checkImage.widthAnchor.constraint(equalToConstant: 30),
+            checkImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
     }
 
     func configure(_ fruit: Fruit) {
