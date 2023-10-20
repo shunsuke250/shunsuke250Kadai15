@@ -10,11 +10,11 @@ import SnapKit
 
 class ViewController: UIViewController {
 
-    private let fruits: [(String, Bool)] = [
-        ("りんご", false),
-        ("みかん", true),
-        ("バナナ", false),
-        ("パイナップル", true)
+    private var fruits = [
+        Fruit(name: "りんご", shouldShow: false),
+        Fruit(name: "みかん", shouldShow: true),
+        Fruit(name: "バナナ", shouldShow: false),
+        Fruit(name: "パイナップル", shouldShow: true)
     ]
 
     private let cellIdentifier = "CustomCell"
@@ -24,12 +24,22 @@ class ViewController: UIViewController {
         return table
     }()
 
+    private var addBarButtonItem: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupComponents()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CheckListTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        
+        addBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "plus"),
+            style: .plain,
+            target: self,
+            action: #selector(addFruit)
+        )
+        navigationItem.rightBarButtonItem = addBarButtonItem
     }
 
     private func setupComponents() {
@@ -38,6 +48,15 @@ class ViewController: UIViewController {
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    // プラスボタンがタップされたとき
+    @objc private func addFruit() {
+        let addViewController = AddViewController()
+        let navigationController = UINavigationController(rootViewController: addViewController)
+        addViewController.delegate = self
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
     }
 }
 
@@ -60,13 +79,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
+        guard let cell = tableView.dequeueReusableCell(
             withIdentifier: cellIdentifier,
-            for: indexPath) as! CheckListTableViewCell
-        let (fruitName, shouldShowImage) = fruits[indexPath.row]
-        cell.customLabel.text = fruitName
-        cell.checkImage.isHidden = !shouldShowImage
+            for: indexPath
+        ) as? CheckListTableViewCell else {
+            return CheckListTableViewCell()
+        }
+        cell.configure(fruits[indexPath.row])
 
         return cell
+    }
+}
+
+extension ViewController: AddViewControllerDelegate {
+    func saveFruit(name: String) {
+        fruits.append(Fruit(name: name, shouldShow: false))
+        tableView.reloadData()
     }
 }
