@@ -10,13 +10,13 @@
 		AB348D142AE37B4C00A8A865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB348D132AE37B4C00A8A865 /* AppDelegate.swift */; };
 		AB348D162AE37B4C00A8A865 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB348D152AE37B4C00A8A865 /* SceneDelegate.swift */; };
 		AB348D182AE37B4C00A8A865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB348D172AE37B4C00A8A865 /* ViewController.swift */; };
-		AB348D1B2AE37B4C00A8A865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB348D192AE37B4C00A8A865 /* Main.storyboard */; };
 		AB348D1D2AE37B4D00A8A865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB348D1C2AE37B4D00A8A865 /* Assets.xcassets */; };
 		AB348D202AE37B4D00A8A865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB348D1E2AE37B4D00A8A865 /* LaunchScreen.storyboard */; };
 		AB348D282AE37C2900A8A865 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB348D272AE37C2900A8A865 /* Fruit.swift */; };
 		AB348D312AE37E2400A8A865 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB348D2F2AE37E2400A8A865 /* AddViewController.swift */; };
 		AB348D372AE3A14F00A8A865 /* FruitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB348D352AE3A14F00A8A865 /* FruitTableViewCell.swift */; };
 		AB348D382AE3A14F00A8A865 /* FruitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB348D362AE3A14F00A8A865 /* FruitTableViewCell.xib */; };
+		AB348D5C2AE5141100A8A865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB348D5B2AE5141100A8A865 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,6 @@
 		AB348D132AE37B4C00A8A865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB348D152AE37B4C00A8A865 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AB348D172AE37B4C00A8A865 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AB348D1A2AE37B4C00A8A865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB348D1C2AE37B4D00A8A865 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB348D1F2AE37B4D00A8A865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB348D212AE37B4D00A8A865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +31,7 @@
 		AB348D2F2AE37E2400A8A865 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		AB348D352AE3A14F00A8A865 /* FruitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitTableViewCell.swift; sourceTree = "<group>"; };
 		AB348D362AE3A14F00A8A865 /* FruitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitTableViewCell.xib; sourceTree = "<group>"; };
+		AB348D5B2AE5141100A8A865 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 				AB348D272AE37C2900A8A865 /* Fruit.swift */,
 				AB348D352AE3A14F00A8A865 /* FruitTableViewCell.swift */,
 				AB348D362AE3A14F00A8A865 /* FruitTableViewCell.xib */,
-				AB348D192AE37B4C00A8A865 /* Main.storyboard */,
+				AB348D5B2AE5141100A8A865 /* Main.storyboard */,
 				AB348D1C2AE37B4D00A8A865 /* Assets.xcassets */,
 				AB348D1E2AE37B4D00A8A865 /* LaunchScreen.storyboard */,
 				AB348D212AE37B4D00A8A865 /* Info.plist */,
@@ -137,10 +137,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB348D5C2AE5141100A8A865 /* Main.storyboard in Resources */,
 				AB348D382AE3A14F00A8A865 /* FruitTableViewCell.xib in Resources */,
 				AB348D202AE37B4D00A8A865 /* LaunchScreen.storyboard in Resources */,
 				AB348D1D2AE37B4D00A8A865 /* Assets.xcassets in Resources */,
-				AB348D1B2AE37B4C00A8A865 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AB348D192AE37B4C00A8A865 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB348D1A2AE37B4C00A8A865 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AB348D1E2AE37B4D00A8A865 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

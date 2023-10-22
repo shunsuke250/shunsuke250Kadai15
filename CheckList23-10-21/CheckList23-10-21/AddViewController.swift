@@ -13,13 +13,22 @@ protocol AddViewControllerDelegate: AnyObject {
 
 class AddViewController: UIViewController {
 
+    @IBOutlet private weak var addTextField: UITextField!
+
     weak var delegate: AddViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction private func cancel(_ sender: UIBarButtonItem) {
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func save(_ sender: UIBarButtonItem) {
+        guard let fruit = addTextField.text?.trimmingCharacters(in: .whitespaces),
+              !fruit.isEmpty else { return }
+        delegate?.saveFruit(name: fruit)
         dismiss(animated: true, completion: nil)
     }
 }

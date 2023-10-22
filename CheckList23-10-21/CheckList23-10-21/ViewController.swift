@@ -28,16 +28,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addFruit(_ sender: Any) {
-        let addViewController = AddViewController()
-        let navigationController = UINavigationController(rootViewController: addViewController)
+        guard let addViewController = storyboard?.instantiateViewController(identifier: "addView") as? AddViewController else { return }
         addViewController.delegate = self
-        navigationController.modalPresentationStyle = .fullScreen
-        present(navigationController, animated: true)
-    }
-    @objc private func addFruit() {
-        let addViewController = AddViewController()
         let navigationController = UINavigationController(rootViewController: addViewController)
-        addViewController.delegate = self
         navigationController.modalPresentationStyle = .fullScreen
         present(navigationController, animated: true)
     }
@@ -62,12 +55,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
+        let cell = tableView.dequeueReusableCell(
             withIdentifier: cellIdentifier,
             for: indexPath
-        ) as? FruitTableViewCell else {
-            return FruitTableViewCell()
-        }
+        ) as! FruitTableViewCell
         cell.configure(fruits[indexPath.row])
 
         return cell
