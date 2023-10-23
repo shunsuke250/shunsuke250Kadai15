@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "FruitTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
 
-    @IBAction func addFruit(_ sender: Any) {
+    @IBAction private func addFruit(_ sender: Any) {
         guard let addViewController = storyboard?.instantiateViewController(identifier: "addView") as? AddViewController else { return }
         addViewController.delegate = self
         let navigationController = UINavigationController(rootViewController: addViewController)
