@@ -9,18 +9,12 @@ import UIKit
 
 class FruitTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var listNameLabel: UILabel!
-    @IBOutlet weak var checkImageView: UIImageView!
+    @IBOutlet private weak var listNameLabel: UILabel!
+    @IBOutlet private weak var checkImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         checkImageView.image = UIImage(systemName: "checkmark")
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     func configure(_ fruit: Fruit) {
