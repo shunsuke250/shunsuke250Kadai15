@@ -34,6 +34,11 @@ class ViewController: UIViewController {
         navigationController.modalPresentationStyle = .fullScreen
         present(navigationController, animated: true)
     }
+
+    private func reverseImageFlag(index: Int) {
+        let selectedFruit = fruits[index]
+        fruits[index] = Fruit(name: selectedFruit.name, shouldShow: !selectedFruit.shouldShow)
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -69,6 +74,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         didSelectRowAt indexPath: IndexPath
     ) {
         tableView.deselectRow(at: indexPath, animated: true)
+        reverseImageFlag(index: indexPath.row)
+        tableView.reloadData()
     }
 }
 
